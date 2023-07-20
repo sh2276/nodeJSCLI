@@ -5,6 +5,8 @@ console.log("Welcome to StartMyDay CLI");
 const queryNewsAPI = () => {
 
   const NewsAPI = require('newsapi');
+
+  /replace the 'demo' api key with your own from newsapi.org
   const newsapi = new NewsAPI('demo');
 
   // To query /v2/top-headlines
@@ -67,6 +69,7 @@ const queryStockAPI = () => {
 const queryWeatherAPI = () => {
   const request = require('request');
 
+  //replace 'demo' api key with your own from weatherapi.com
   const url = 'http://api.weatherapi.com/v1/current.json?key=demo&q=New York';
 
   request(url, (err, res, body) => {
